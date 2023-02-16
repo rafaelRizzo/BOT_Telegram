@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BOT para telegram online">
+    <meta name="keywords" content="TeleBOT bot telegram bot telegram online telegram bot online telegram online bot">
+    <meta name="author" content="Rafael Rizzo Breschi">
+    <!-- Compiled and minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="./js/materialize.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>TeleBOT</title>
+</head>
+
+<body>
+
+
+    <div class="grid">
+        <div class="anuncio-1">
+            1
+        </div>
+
+        <main>
+            <form>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#" class="tooltipped" data-position="bot" data-tooltip="Formatações - Em breve">
+                                <img class="icons" src="./public/svg/more.svg" alt="Formatações">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#donate" class="tooltipped modal-trigger" data-position="bot"
+                                data-tooltip="Doações">
+                                <img class="icons" src="./public/svg/donate.svg" alt="Doações">
+                            </a>
+                            <div id="donate" class="modal">
+                                <h5 class="center">Aponte sua camera para o QR code abaixo</h5>
+                                <div class="flex">
+                                    <img class="qrcode_pix" src="./pix/qrcode-pix.png" alt="QR CODE PIX">
+                                </div>
+                                <h6 class="center">Ou copie o código pix copia e cola abaixo!</h6>
+                                <div class="container_input_pix">
+                                    <input class="center" id="input_cod_pix" type="text"
+                                        value="00020126360014BR.GOV.BCB.PIX0114+55189880960305204000053039865802BR5920RafaelRizzoBreschi6015SantoAnastacio62070503***63048AA4"
+                                        disabled>
+                                    <div class="container_copy tooltipped" data-position="top" data-tooltip="Copiar">
+                                        <img src="./public/svg/copy.svg" alt="Copiar código pix">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="#" class="tooltipped" data-position="bot" data-tooltip="Repositório - Em breve">
+                                <img class="icons" src="./public/svg/code.svg" alt="Repositório">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltipped" data-position="bot" data-tooltip="Ajuda - Em breve">
+                                <img class="icons" src="./public/svg/help.svg" alt="Ajuda">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltipped" data-position="bot" data-tooltip="Dark Mode - Em breve">
+                                <img class="icons" src="./public/svg/moon.svg" alt="Toogle Dark Mode">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltipped" data-position="bot" data-tooltip="Alterar idioma - Em breve">
+                                <img class="icons" src="./public/svg/translate.svg" alt="Alterar idioma">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <h2>BOT PARA TELEGRAM</h2>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="token_BOT" type="text" autocomplete="off">
+                        <label for="token_BOT">Token do BOT</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="chat_ID_BOT" type="text" autocomplete="off">
+                        <label for="chat_ID_BOT">Chat ID</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="image_url" type="url" autocomplete="off">
+                        <label for="image_url">Insira uma URL</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="mensagem" class="materialize-textarea"></textarea>
+                        <label for="mensagem">Mensagem...</label>
+                    </div>
+                </div>
+                <div class="flex">
+                    <label class="box_termo">
+                        <input id="termo" type="checkbox">
+                        <span>
+                            Li e concordo com os
+                            <a href="#termos" class="modal-trigger"> termos de
+                                uso.</a>
+                        </span>
+                    </label>
+
+                    <div class="modal" id="termos">
+                        <p>
+                            <strong>Esse site foi com o intuito de ajudar a enviar mensagem usando a API do
+                                telegram!</strong>
+                        </p>
+                        <ol>
+                            <li>
+                                Nenhuma imagem ou texto é enviado diretamente por nós.</li>
+                            <li>
+                                Não cobramos nenhum valor para a utilização de nossos serviços, porém, fique a vontade
+                                para contribuir com uma doação!
+                            <li>
+                                Metade de todas as doações recebidas são utilizadas para ajudar instituições de animais
+                                de rua abanadonados!
+                            <li>
+                                Qualquer abuso ou spam é de total responsabilidade do usuário!
+                            </li>
+                            <li>
+                                Também é responsabilidade do dono do BOT e do CHAT ID fornecer esses dados a um
+                                terceiro para ser utilizado em nosso site.
+                            </li>
+                            <li>
+                                Não cabe a nós o envio de imagens ou mensagens inapropriadas.
+                            </li>
+                            <li>
+                                Em nenhuma hipótese informe as credencias do seu BOT e do CHAT ID para alguem não
+                                confiável.
+                            </li>
+                            <li>
+                                Não entraremos em contato sem que você abra um atendimento de ajuda conosco, nunca
+                                iremos pedir senhas ou dados pessoais, cuidadao com golpes!
+                            </li>
+                            <li>
+                                Alguns termos podem sofrer alterações, serem removidos, adicionados ou reavaliados de
+                                acordo com o tempo não determinado por isso fique sempre atento!
+                            </li>
+                            <li>
+                                É obrigatório aceitar com os termos a cima para utilização do nosso serviço!
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <button id="enviar_mensagem" class="btn waves-effect waves-light">
+                    Enviar
+                </button>
+            </form>
+        </main>
+
+        <div class="anuncio-2">
+            2
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Desenvolvido por Rafael Rizzo Breschi</p>
+    </footer>
+
+    <!-- Toast's -->
+    <a id="copy_pix" onclick="M.toast({html: 'Código copia e cola, copiado com sucesso!'})"></a>
+    <a id="error_copy_pix"
+        onclick="M.toast({html: 'Ops... ocorreu algum erro para copiar automaticamente, tente novamente ou selecione todo o código pra copiar e cole em seu pix!'})"></a>
+    <a id="success_image" onclick="M.toast({html: 'Imagem enviada com sucesso!'})"></a>
+    <a id="success_message" onclick="M.toast({html: 'Mensagem enviada com sucesso!'})"></a>
+    <a id="error_input" onclick="M.toast({html: 'Por favor... preencha o TOKEN e o CHAT ID.'})"></a>
+    <a id="error_url"
+        onclick="M.toast({html: 'Ops... Parece que essa URL não é válida para envio, por favor cole outra.'})"></a>
+    <a id="error_message" onclick="M.toast({html: 'Preencha a mensagem que gostaria de enviar.'})"></a>
+    <a id="error_bot"
+        onclick="M.toast({html: 'Ocorreu algum erro com o seu BOT, verifique as credênciais ou entre em contato com o nosso suporte!'})"></a>
+    <a id="error_termo" onclick="M.toast({html: 'Você precisa aceitar os termos antes de continuar!'})"></a>
+    <!-- Toast's -->
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="./js/dark-mode.js"></script>
+    <script src="./js/api-telegram.js"></script>
+</body>
+
+</html>
